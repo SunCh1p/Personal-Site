@@ -1,0 +1,7 @@
+Requirements:
+    Only built with HTML and CSS
+    A hero section
+    A resume page that shows education, skills, workexperience, education
+    Project Portfolio
+    about me section
+    contact me section 

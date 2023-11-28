@@ -1,0 +1,29 @@
+body{
+    background: linear-gradient(300deg, white,#00537a,#013c58, #0b1e33,#0b1e33, #013c58, #00537a, white);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    margin: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.body{
+    background-color: #ffba42;
+    border: 3px solid black;
+
+    margin: 80px;
+    box-shadow: 20px 20px
+}
+#hero{
+    margin: 20px;
+}

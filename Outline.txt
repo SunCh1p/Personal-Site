@@ -2,6 +2,10 @@ Requirements:
     Only built with HTML and CSS
     A hero section
     A resume page that shows education, skills, workexperience, education
-    Project Portfolio
+    Project Portfolio page
+        Minesweeper(C++)
+        Chess(Python)
+        DogTinder
+        Godot Project
     about me section
     contact me section 

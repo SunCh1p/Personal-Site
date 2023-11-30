@@ -2,6 +2,7 @@ body{
     background: linear-gradient(300deg, white,#00537a,#013c58, #0b1e33,#0b1e33, #013c58, #00537a, white);
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
+    height: 100vh;
     margin: 0;
 }
 
@@ -26,7 +27,7 @@ body{
 
 /*Navbar begin*/
 .NavBar{
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     border-bottom: solid 3px black;
     list-style-type: none;
     margin: 0;
@@ -45,11 +46,34 @@ body{
 }
 
 .NavBar > li:last-child{
+    border-left: solid 1px black;
     border-right: none;
+    float:right;
 }
 
 .NavBar > li:hover{
     background-color: gold;
     color: lightgray;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
 /*Navbar end*/
+
+/*Hero Begin*/
+.Hero{
+    text-align: center;
+    margin-bottom: 100pxpx;
+}
+/*Hero Ends*/
+
+/*About me Begin*/
+/*About me End*/
+
+/*Resume Begin*/
+/*Resume End*/
+
+/*Contact me Begin*/
+/*Contact me End*/

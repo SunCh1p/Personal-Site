@@ -3,33 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <title>Personal Site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <div class = "body">
-        <!--NavBar-->
-        <ul class = "NavBar">
-            <li><a href = "#Hero">Home</a></li>
-            <li><a href = "about.html">About me</a></li>
-            <li><a href = "resume.html">Resume</a></li>
-            <li><a href = "portfolio.html">Portfolio</a></li>
-            <li><a href = "contact.html">Contact Info</a></li>
-        </ul>
-        <!--Hero section-->
-        <section class = "Hero" id = Home>
-            <h1>Hi, I'm Connor Blaha</h1>
-                <p> This is my personal website, feel free to contact me.
-                </p>
-        </section>
-        <!--About me-->
-        <!--Resume Page-->
-        <!--Project Portfolio-->
-        <!--Contact Me-->
+<body>  
+    <div class = "container">
+        <div class = "body">
+            <!--NavBar-->
+            <div class = "NavBar">
+                <ul>
+                    <li><a href = #Home><span class = "button">Home</span></a></li>
+                    <li><a href = #about><span class = "button">About me</span></a></li>
+                    <li><a href = #port><span class = "button">Portfolio</span></a></li>
+                    <li><a href = #contact><span class = "button">Contact Info</span></a></li>
+                    <li><a href = "skills.html"><span class = "button">Resume</span></a></li>
+                    
+                </ul>
+            </div>
 
+            <div class = "Hero" id = "Home">
+                <div class = "text">
+                    <h1>Hello,</h1>
+                    <hr>
+                    <p>I'm Connor!</p>
+                    <p>Welcome to my Website!</p>
+                    <p id = "scroll">-Scroll down to see more-</p>
+                    <div class = "downward-pointer"></div>
+                </div>
+                <div class = "particle-container">
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                    <div class = "particle"></div>
+                </div>
+            </div>
+            <div class = "about-me">
+                <div class = "a-container">
+                    <div class = "a-header" id = "about">
+                        <h2>About me</h2>
+                    </div>
+                    <div class = "a-text">
+                        <p>Hello, I'm Connor (SunCh1p), I'm a student at Kent State University pursuing a B.S. degree in Computer Science. I am currently seeking an internship in a programming/it related field.
+                            If you like what you see, contact me.
+                            Outside of programming, I like to play video games, listen to music, and spend time with family and friends. My favorite books series is the "Hyperion Cantos" series by Dan Simmons. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class = "Portfolio" id = "port"></div>
+            <div class ="contact" id = "contact">
+                <ul>email: blaha.s.connor@gmail.com</ul>
+                <ul>Linkedin link</ul>
+            </div>
+            <div class = "footer">
+                <p>Created by SunCh1p(Last modified 12/9/2023)</p>
+            </div>
+        </div>
+    </div>
 </body>

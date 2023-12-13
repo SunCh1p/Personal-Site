@@ -8,9 +8,16 @@ color pallete
 */
 
 /*General Styling*/
+:root{
+    --background-color: #2C2B30;
+    --button-color: #F58F7C;
+    --navbar-color: #4F4F51;
+    --highlight-color: #F2C4CE;
+}
 
 html{
     scroll-behavior: smooth;
+    background-color: var(--background-color);
 }
 body{
     margin: 0;
@@ -20,37 +27,21 @@ body{
     font-family: "Courier New", Courier, monospace;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #2C2B30;
+    background-color: var(--background-color);
     text-align: center;
 }
 
-/*Media Queries*/
-/*phone size*/
-@media (width < 480px){
-
+#highlight{
+    color:#F2C4CE
 }
-/*small tablet*/
-@media (min-width: 481px) and (max-width: 768px){
-
-}
-/*laptop*/
-@media (min-width:769px) and (max-width: 1024px){
-    
-}
-/*larger laptop or small desktop monitor*/
-@media (min-width: 1025px )and (max-width: 1200px){
-    
-}
-/*desktop monitor or tv*/
-@media (width > 1200px){
-    
-}
-/*Media Queries end*/
 
 /*NavBar*/
 .NavBar{
     z-index: 1;
-    background-color: #2C2B30;
+    border-top: solid lightgray 1px;
+    border-bottom: solid lightgray 1px;
+    background-color: #4F4F51;
+    box-shadow: 0px 0px 20px crimson;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,18 +60,14 @@ body{
 .button{
     font-weight: bolder;
     font-size: 19px;
-    color: #F58F7C;
+    color: var(--button-color);
     float:left;
     padding: 14px 16px;
 }
 
 .button:hover{
-    background-color: #F58F7C;
+    background-color: var(--button-color);
     color:black;
-}
-
-.button:click{
-    background-color: #F2C4CE;
 }
 
 /*Hero Begin*/
@@ -91,7 +78,7 @@ body{
     align-items: center;
     position: relative;
     text-align: center;
-    background: linear-gradient(to bottom right, #2C2B30, #4F4F51);
+    background: linear-gradient(to bottom, var(--background-color), #4F4F51,var(--background-color));
 }
 
 
@@ -99,7 +86,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:#F58F7C;
+    color: var(--button-color);
     padding: 30px;
     font-weight: bold;
     text-shadow: 2px 1px 5px crimson;
@@ -109,19 +96,21 @@ body{
 .text h1{
     font-family: "Lucida Console", Courier, monospace;
     font-weight: bolder;
+    font-size: 50px;
 }
 .text > hr{
     content: "";
-    border-bottom: solid #F58F7C 1px;
+    border-bottom: solid var(--button-color) 1px;
     width: 100%
 }
 
-.particle-container .particle{
+.particle{
+    z-index: 0;
     position: absolute;
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    background: radial-gradient(#F2C4CE,#F58F7C);
+    background: radial-gradient(#F2C4CE,var(--button-color));
     box-shadow: 3px 4px 10px crimson;
 }
 
@@ -186,19 +175,19 @@ body{
         transform: translate(0);
         opacity: 1;
     }
-    20%{
+    10%{
         transform: translate(5px, -20px);
         opacity: 0.8;
     }
-    40%{
+    20%{
         transform: translate(10px, -30px);
         opacity: 0.6;
     }
-    60%{
+    30%{
         transform: translate(15px, -40px);
         opacity: 0.4%;
     }
-    80%{
+    40%{
         transform: translate(20px, -50px);
         opacity: 0.2%;
     }
@@ -217,53 +206,147 @@ body{
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 15px solid #F58F7C;
+    border-top: 15px solid var(--button-color);
     font-size: 0;
     line-height: 0;
 }
 /*Hero ends*/
 
-/*About me begins*/
+/*General CSS for containers*/
 .about-me{
-    background: linear-gradient(to top right, #2C2B30, #4F4F51);
-    color: #2C2B30;
+    box-shadow: 0px 0px 20px crimson;
+    z-index: 1;
+    color: var(--background-color);
+    border-bottom: solid 1px lightgray;
 }
 
-.a-container{
-    margin: 10%;
-    background-color: #2C2B30;
-    border: solid 3px #2C2B30;
+.container{
+    background-color: #4F4F51;
     border-radius: 5px;
+    color: rgb(143, 142, 142);
+}
+h3{
+    color: lightgray;
 }
 
-.a-header{
+.header{
     padding: 3px;
-    color:#F58F7C;
+    color: var(--button-color);
+    background-color: #4F4F51;
+    border-top: solid lightgray 1px;
+    border-bottom: solid lightgray 1px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bolder;
 }
 
+.hero{
+    display: grid;
+    grid-template-columns:33% 66%;
+    grid-template-rows: 25% 75%;
+    background-color:var(--background-color);
+}
+
+.title{
+    grid-column: span 2;
+    border-top: solid darkgray 1px;
+    border-bottom: solid darkgray 1px;
+}
 .a-text{
-    padding: 10px;
-    margin: 5px;
-    background-color: lightgray;
+    text-align: left;
+    padding-left: 10px;
 }
 
-/*About me ends*/
+.img{
+    padding: 10px;
+    padding-top: 20px;
+    border-right: solid lightgray 1px;
+}
+
+.img img{
+    border-radius: 50%;
+    width: 50%;
+}
 
 /*Portfolio Begin*/
 .Portfolio{
-    height: 100vh;
+    background: linear-gradient(to bottom right, var(--background-color), #4F4F51), lightgray;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-proj{
+    padding-top: 40px;
+    color: var(--button-color);
+    text-shadow: 2px 1px 5px crimson;
+    font-size: xx-large;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bolder;
+    width: fit-content;
+    align-self: center;
+}
+
+
+.projects{
+    padding: 10%;
+    display: flex;
+    position: relative;
+    justify-content:space-evenly;
+}
+
+.proj{
+    display: flex;
+    flex-direction: column;
+    background-color: #4F4F51;
+    box-shadow: 0px 0px 20px crimson;
+    margin: 10px;
+    border-radius: 10%;
+    width: 25%;
+}
+
+.proj:hover{
+    transform:scale(1.2);
+    box-shadow: none;
+}
+
+.square{
+    background-color:var(--button-color);
+    height: 60px;
+    width: 60px;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 60px solid var(--button-color);
+}
+
+.square:nth-child(1){
+
+}
+
+
+@keyframes rotation{
+
 }
 /*Portfolio End*/
 
+/*Contact me Begin*/
+.contact{
+    background: linear-gradient(to top right, var(--background-color), #4F4F51);
+}
+/*Contact me End*/
+
 /*Footer Begin*/
 .footer{
-    position: fixed;
-    bottom: 0pt;
-    left: 0pt;
-    width: 100%;
     display: flex;
-    background-color: #2C2B30;
-    color: #F58F7C;
+    background-color: var(--background-color);
+    color: var(--button-color);
     justify-content: center;
     align-items: center;
     height: 30px;
@@ -273,3 +356,33 @@ body{
 .footer p{
     margin: 0;
 }
+
+/*small tablet*/
+@media (width < 768px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .proj{
+        width: 60%;
+        margin-bottom: 30px;
+    }
+}
+/*laptop*/
+@media (min-width:769px) and (max-width: 1024px){
+    
+}
+/*larger laptop or small desktop monitor*/
+@media (min-width: 1025px )and (max-width: 1200px){
+    
+}
+/*desktop monitor or tv*/
+@media (width > 1200px){
+    
+}
+/*Media Queries end*/

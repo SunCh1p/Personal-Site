@@ -311,34 +311,51 @@ h3{
     transform:scale(1.2);
     box-shadow: none;
 }
-
-.square{
-    background-color:var(--button-color);
-    height: 60px;
-    width: 60px;
-}
-
-.triangle{
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 60px solid var(--button-color);
-}
-
-.square:nth-child(1){
-
-}
-
-
-@keyframes rotation{
-
-}
 /*Portfolio End*/
 
 /*Contact me Begin*/
+.contact > .container{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    height: auto;
+}
+
 .contact{
     background: linear-gradient(to top right, var(--background-color), #4F4F51);
+    color: #F58F7C;
+    padding-bottom: 5%;
+}
+.c-header{
+    border-color: solid 1px white;
+    color:#F58F7C;
+    text-shadow: 2px 1px 5px crimson;
+    padding: 10px;
+    border-top: solid 1px white;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.c-text{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: xx-large;
+    padding-top: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+
+.c-text *{
+    background-color:#4F4F51;
+    border-radius: 20%;
+    border: solid 1px white;
+    box-shadow: 0px 0px 6px crimson;
+}
+
+.c-text > a > .button:hover{
+    background-color:gray;
+    color:#F58F7C
 }
 /*Contact me End*/
 
@@ -351,6 +368,7 @@ h3{
     align-items: center;
     height: 30px;
     font-family: "Courier New", Courier, monospace;
+    box-shadow: 0px 0px 20px crimson;
 }
 
 .footer p{
